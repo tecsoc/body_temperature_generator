@@ -1,3 +1,13 @@
-.generate-button {
+body{
+	width: 100vw;
+	height: 100vh;
+	padding: 2%;
+}
+
+.label-for-input {
+	margin-right: 0.5em;
+}
+
+#generate-button {
 	margin: 1em auto;
 }

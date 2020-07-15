@@ -23,12 +23,12 @@
 
 <body>
 	<h1>体温ジェネレーター</h1>
-	<form method="POST" onsubmit="body_temperature_generate(this)">
-		<span>最小値：</span><input type="number" name="min_value" value="36.0" min="0.0" max="100" step="0.1">
+	<form name="generator_form" onsubmit="return body_temperature_generate();">
+		<label for="min_value" class="label-for-input">最小値</label><input type="number" name="min_value" value="36.0" min="0.0" max="100" step="0.1" auttofocus required>
 		<br>
-		<span>最大値：</span><input type="number" name="max_value"value="37.0" min="0.0" max="100" step="0.1">
+		<label for="max_value" class="label-for-input">最大値</label><input type="number" name="max_value"value="37.0" min="0.0" max="100" step="0.1" required>
 		<br>
-		<input type="submit" class="generate-button" value="生成" >
+		<input type="submit" id="generate-button" value="生成">
 	</from>
 	<!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
 	<script src="main.js"></script>
