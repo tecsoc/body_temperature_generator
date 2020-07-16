@@ -24,9 +24,14 @@
 <body>
 	<h1>体温ジェネレーター</h1>
 	<form name="generator_form" onsubmit="return generateBodyTemperature();">
-		<label for="min_value" class="label-for-input">最小値</label><input type="number" name="min_value" onchange="seOneNumberDecimal(this)" value="36.0" min="0.0" max="100" step="0.1" required>
+		<label for="min" class="label-for-input">最小値</label><input type="number" name="min" onchange="setOneNumberDecimal(this)" value="36.0" min="0.0" max="100" step="0.1" required>
 		<br>
-		<label for="max_value" class="label-for-input">最大値</label><input type="number" name="max_value" onchange="seOneNumberDecimal(this)" value="37.0" min="0.0" max="100" step="0.1" required>
+		<label for="max" class="label-for-input">最大値</label><input type="number" name="max" onchange="setOneNumberDecimal(this)" value="37.0" min="0.0" max="100" step="0.1" required>
+		<br>
+		<select id="select-box" name="distribution">
+			<option value="uniform_distribution" selected>一様分布（ランダム）</option>
+			<option value="normal_distribution">正規分布</option>
+		</select>
 		<br>
 		<input type="submit" id="generate-button" value="生成">
 	</from>
