@@ -1,7 +1,7 @@
-function setOneNumberDecimal(e) {
+const setOneNumberDecimal = (e) => {
   e.value = parseFloat(e.value).toFixed(1);
 }
-function generateBodyTemperature() {
+const generateBodyTemperature = () => {
 	const min = Number(document.generator_form.min.value);
 	const max = Number(document.generator_form.max.value);
 	const distribution = document.generator_form.distribution.value;
@@ -17,7 +17,7 @@ function generateBodyTemperature() {
 	return false;
 }
 
-function getStandardNorm() {
+const getStandardNorm = () => {
 	// 平均0, 分散1の標準正規分布
 	m = 0
 	s = 1
@@ -37,4 +37,4 @@ function getStandardNorm() {
 	} else {
 		return getStandardNorm();
 	}
-};
+}
